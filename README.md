@@ -14,7 +14,7 @@ This command will do the following:
 - Activate the virtual environment.
 - Install the dependencies listed in `requirements.txt`. (pygame is a dependency)
 
-4. Run the start script to start the game.
+3. Run the start script to start the game.
 
 If using PowerShell, run:
 `cmd /c start.bat`
