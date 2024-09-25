@@ -1,21 +1,31 @@
 import pygame
+from game import Game
+from constants import screenWidth, screenHeight
 
-# Initialize pygame
 pygame.init()
 
-# Set up the game window
-screen = pygame.display.set_mode((800, 600))
+screen = pygame.display.set_mode((screenWidth, screenHeight))
+clock = pygame.time.Clock()
 
-# Main game loop
+game = Game(screenWidth, screenHeight)
+
 running = True
 while running:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
+        if event.type == pygame.KEYDOWN:
+            game.handle_key_down(event.key)
+        if event.type == pygame.KEYUP:
+            game.handle_key_up(event.key)
+        if event.type == pygame.MOUSEBUTTONDOWN:
+            pos = pygame.mouse.get_pos()
+            game.handle_mouse_click(pos)
 
-    # Game logic and rendering code go here
-
+    game.update()
+    screen.fill((255, 255, 255))
+    game.draw(screen)
     pygame.display.flip()
+    clock.tick(60)
 
-# Clean up
 pygame.quit()
