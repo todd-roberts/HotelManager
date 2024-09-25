@@ -1,6 +1,6 @@
 import pygame
 from utils import ft_to_pix
-from constants import screenWidth, screenHeight
+from constants import SCREEN_WIDTH, SCREEN_HEIGHT
 
 class Manager:
     CHECK_IN_STATE = 'check in interaction'
@@ -14,7 +14,7 @@ class Manager:
         self.current_door = None
         self.movement = {'up': False, 'down': False, 'left': False, 'right': False}
         self.interactable_state = None
-        self.screen_center = [screenWidth/2, screenHeight/2]
+        self.screen_center = [SCREEN_WIDTH/2, SCREEN_HEIGHT/2]
 
     def set_bounds(self, space):
         self.pos_x_bnd = space.loc[0] + space.size[0]

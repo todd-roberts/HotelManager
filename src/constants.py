@@ -1,2 +1,3 @@
-screenWidth = 800
-screenHeight = 800
+SCREEN_WIDTH = 800
+SCREEN_HEIGHT = 800
+PIX_PER_FT = 10

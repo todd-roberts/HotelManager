@@ -1,13 +1,13 @@
 import pygame
 from game import Game
-from constants import screenWidth, screenHeight
+from constants import SCREEN_WIDTH, SCREEN_HEIGHT
 
 pygame.init()
 
-screen = pygame.display.set_mode((screenWidth, screenHeight))
+screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 clock = pygame.time.Clock()
 
-game = Game(screenWidth, screenHeight)
+game = Game(SCREEN_WIDTH, SCREEN_HEIGHT)
 
 running = True
 while running:
